@@ -4,21 +4,25 @@ import java.util.Scanner;
 //default, poossono usarli chi è nello stesso package(la stessa cartella) 
 public class bicicletta {
     
-    int diametroRuota = 20;
+    int diametroRuota;
+    String coloreBici;
+    float peso;
 
-    bicicletta(int dim){
+    public bicicletta(int dim, String c, float p){
         diametroRuota = dim;
+        coloreBici = c;
+        peso = p;
     }
 
     public void presentati(){
-        System.out.println("Sono bicicletta che il diametro di: " + diametroRuota);
+        System.out.println("Sono bicicletta di colore" + coloreBici  + "che il diametro di: " + diametroRuota + "e che pesa" + peso +"kg");
     }
 
 
     //I metodi statici possono stare anche fuori dalla classe;
     public static void main(String[] args) {
-        bicicletta bici1 = new bicicletta(6);
-        bicicletta bici2 = new bicicletta(8);
+        bicicletta bici1 = new bicicletta(6,"rosso",30.2);
+        bicicletta bici2 = new bicicletta(8,"gialla",60.9);
         bici1.presentati();
         bici2.presentati();
 
