@@ -43,15 +43,18 @@ public class calcolatrice {
         }
         return a/b;
     }
+    public double potenza(){
+        return Math.pow(a,b);
+    }
 
     public void menu(){
         System.out.println("Benvenuto nella calcolatrice op");
         while(true){
             System.out.println("Cosa vuoi fare? inserisci il numero per decidere");
-            System.out.println("-----------------" + "\n[1] Addizione" + "\n[2] Sottrazione" + "\n[3] Moltiplicazione" + "\n[4] Divisione" + "\n[0] uscire" + "\n-----------------");
+            System.out.println("-----------------" + "\n[1] Addizione" + "\n[2] Sottrazione" + "\n[3] Moltiplicazione" + "\n[4] Divisione" + "\n[5] Potenza" + "\n[0] uscire" + "\n-----------------");
             int risposta = inputTerminale.nextInt();
             if(risposta == 0) break;
-            else if(risposta > 4 || risposta < 0){
+            else if(risposta > 5 || risposta < 0){
                 System.out.println("valore non valido");
                 continue;
             }
@@ -71,6 +74,9 @@ public class calcolatrice {
                     break;
                 case 4:
                     System.out.println(divisione());
+                    break;
+                case 5:
+                    System.out.println(potenza());
                     break;
             }
         }
